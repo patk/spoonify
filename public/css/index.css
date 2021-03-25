@@ -54,6 +54,7 @@ nav {
 
 .nav-links-container a:hover {
   color: #bbbbbb;
+  transition-duration: 0.2s;
 }
 
 .active {
@@ -61,4 +62,5 @@ nav {
   font-weight: bold;
   border-bottom: 1px solid #272932;
   padding-bottom: 5px;
+  transition-duration: 0.2s;
 }
