@@ -10,7 +10,7 @@ const settings = {
     "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/food/videos/search?query=chicken%20soup&excludeingredients=mustard&includeingredients=chicken&minLength=0&maxLength=999&offset=0&number=10",
   method: "GET",
   headers: {
-    "x-rapidapi-key": "0f8678beb3mshde23e1755876201p142a97jsnca10e1ca4d77",
+    "x-rapidapi-key": `${api_key}`,
     "x-rapidapi-host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
   },
 };
