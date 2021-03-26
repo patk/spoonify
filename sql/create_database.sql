@@ -1,0 +1,3 @@
+CREATE DATABASE spoonify;
+
+CREATE EXTENSION pgcrypto;
