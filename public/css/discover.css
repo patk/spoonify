@@ -1,1 +1,8 @@
+.hero-container {
+  max-width: 100%;
+}
 
+.hero-container iframe {
+  height: 435px;
+  width: 100%;
+}
