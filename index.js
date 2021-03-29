@@ -23,11 +23,11 @@ app.set("layout", "./layouts/layout");
 app.set("view engine", "ejs");
 
 // routes
-const discoverRouter = require("./routes/discover.js");
+const exploreRouter = require("./routes/explore.js");
 const communityRouter = require("./routes/community.js");
 const profileRouter = require("./routes/profile.js");
 
-app.use("/", discoverRouter);
+app.use("/", exploreRouter);
 app.use("/community", communityRouter);
 app.use("/profile", profileRouter);
 

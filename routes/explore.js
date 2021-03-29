@@ -3,8 +3,8 @@ const router = express.Router();
 const { api_key } = require("../config");
 
 router.get("/", (req, res) => {
-  res.render("pages/discover", {
-    title: "Discover",
+  res.render("pages/explore", {
+    title: "Explore",
     api_key: api_key,
   });
 });
