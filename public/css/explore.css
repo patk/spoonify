@@ -36,14 +36,11 @@
   color: white;
 }*/
 
+/* HERO SECTION */
+
 .hero-container {
   height: 600px;
 }
-
-/*.hero-overlay-container {
-  display: flex;
-  flex-direction: row;
-}*/
 
 .hero-text-container {
   display: flex;
@@ -65,8 +62,9 @@
   text-shadow: 0px 3px 10px #000000;
 }
 
-.hero-text-container h3 {
+.hero-text-container h4 {
   color: white;
+  font-size: 20px;
   font-weight: 300;
   text-shadow: 0px 3px 10px #000000;
 }
@@ -89,9 +87,14 @@
   height: 40px;
   background-color: rgba(255, 255, 255, 0.8);
   border: white;
-  padding: 20px;
+  padding: 15px;
   border-radius: 20px;
   margin-right: 10px;
+}
+
+.search-bar input:hover {
+  box-shadow: 0px 3px 10px #272932;
+  transition-duration: 0.5s;
 }
 
 .search-bar button {
@@ -133,8 +136,6 @@
   height: 150px;
   width: 350px;
   border-radius: 20px;
-  /*box-shadow: 0px 3px 10px #bbbbbb;*/
-  /*padding: 20px;*/
 }
 
 .recipe-container:hover {
@@ -147,6 +148,110 @@
   border-bottom-left-radius: 20px;
 }
 
-.recipe-container h3 {
-  margin-left: 5px;
+.recipe-container h5 {
+  margin: 10px;
+  font-size: 15px;
+}
+
+/* MEAL PLAN SECTION */
+
+.meal-plan-container {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 100px;
+}
+
+.meal-plan-header {
+  display: flex;
+  flex-direction: row;
+}
+
+.meal-plan-header h3 {
+  font-size: 25px;
+}
+
+.meal-plan-header #selectdiet {
+  margin-left: 20px;
+  background-color: #fcb97d;
+  border-color: #fcb97d;
+  border-radius: 20px;
+  width: 200px;
+  padding: 0px 15px;
+}
+
+.meal-plan-header #selectdiet:hover {
+  box-shadow: 0px 3px 10px #272932;
+  transition-duration: 0.5s;
+}
+
+.meal-plan-content {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+
+.meal-plan-content h4 {
+  font-size: 20px;
+}
+
+.meal-plan-content h5 {
+  font-size: 15px;
+}
+
+.meal-plan-meals {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.meal-plan-meals img {
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.meal-container {
+  width: 30%;
+}
+
+.meal-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  border-radius: 20px;
+  background-color: #bbbbbb;
+}
+
+.meal-card:hover {
+  box-shadow: 0px 3px 10px #272932;
+  transition-duration: 0.5s;
+}
+
+.meal-card h5 {
+  margin: 10px;
+  text-align: center;
+}
+
+.meal-plan-nutrition {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+
+.meal-plan-nutrition table {
+  margin-top: 10px;
+}
+
+td {
+  padding: 4%;
+  border-bottom: 1px solid #bbbbbb;
+  vertical-align: middle;
+}
+
+.vertical-separator {
+  border-left: 3px solid black;
+  margin: 0 3%;
 }

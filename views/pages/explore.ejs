@@ -12,7 +12,7 @@
         <div class="hero-overlay-container">
           <div class="hero-text-container">
             <h2>Thinking of what to cook?</h2>
-            <h3>Explore over 365,000 recipes across different cuisines at a click of a button.</h3>
+            <h4>Explore over 365,000 recipes across different cuisines at a click of a button.</h4>
               <form class="search-bar" action="/" method="post">
                 <input id="search-field" name="search-field" type="search" placeholder="What are you craving?">
                 <button type="submit">Search</button>
@@ -22,21 +22,20 @@
           <div class="hero-recipe-container">
             <div class="recipe-container">
               <img src="https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2018/12/Shakshuka-19.jpg">
-              <h3>Recipe 1</h3>
+              <h5>Recipe 1</h5>
             </div>
             <div class="recipe-container">
               <img src="https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2018/12/Shakshuka-19.jpg">
-              <h3>Recipe 2</h3>
+              <h5>Recipe 2</h5>
             </div>
             <div class="recipe-container">
               <img src="https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2018/12/Shakshuka-19.jpg">
-              <h3>Recipe 3</h3>
+              <h5>Recipe 3</h5>
             </div>
             
           </div>
 
         </div>
-
         
     </div>
   <!--<div class="hero-container">
@@ -45,20 +44,79 @@
   </div>-->
   
 </section>
+    <div class="meal-plan-container">
+        <div class="meal-plan-header">
+            <h3>Meal Plan</h3>
+            <select id="selectdiet" name="selectdiet">
+                <option value="gluten free">Gluten Free</option>
+                <option value="ketogenic">Ketogenic</option>
+                <option value="vegetarian">Vegetarian</option>
+                <option value="lacto-vegetarian">Lacto-Vegetarian</option>
+                <option value="ovo-vegetarian">Ovo-Vegetarian</option>
+                <option value="vegan">Vegan</option>
+                <option value="pescetarian">Pescetarian</option>
+                <option value="paleo">Paleo</option>
+                <option value="primal">Primal</option>
+                <option value="whole30">Whole30</option>
+            </select>
+        </div>
+        <div class="meal-plan-content">
+            <div class="meal-plan-meals">
+                <div class="meal-container">
+                  <h4>Breakfast</h4>
+                  <div class = "meal-card">
+                    <img src="https://spoonacular.com/recipeImages/395635-556x370.jpg">
+                    <h5>Cream Cheese Banana Nut Bread</h5>
+                  </div>
+                </div>
+                <div class="meal-container">
+                  <h4>Lunch</h4>
+                  <div class = "meal-card">
+                    <img src="https://spoonacular.com/recipeImages/395635-556x370.jpg">
+                    <h5>Leftover Rice Casserole</h5>
+                  </div>
+                </div>
+                <div class="meal-container">
+                  <h4>Dinner</h4>
+                  <div class = "meal-card">
+                    <img src="https://spoonacular.com/recipeImages/395635-556x370.jpg">
+                    <h5>Leek & Cheese Pie</h5>
+                  </div>
+                </div>
+            </div>
+            <span class="vertical-separator"></span>
+            <div class="meal-plan-nutrition">
+                <h4>Nutrition Facts</h4>
+                <table>
+                  <tr>
+                    <td>Calories</td>
+                    <td>hello1</td>
+                  </tr>
+                  <tr>
+                    <td>Protein</td>
+                    <td>hello2</td>
+                  </tr>
+                  <tr>
+                    <td>Fat</td>
+                    <td>hello3</td>
+                  </tr>
+                  <tr>
+                    <td>Carbohydrates</td>
+                    <td>hello4</td>
+                  </tr>
+                </table>
+            </div>
+        </div>
+  </div>
+<section>
 
-  <h1>EXPLORE</h1>
-  <h1>EXPLORE</h1>
-  <h1>EXPLORE</h1>
-  <h1>EXPLORE</h1>
-  <h1>EXPLORE</h1>
-  <h1>EXPLORE</h1>
-  <h1>EXPLORE</h1>
-  <h1>EXPLORE</h1>
-  <h1>EXPLORE</h1>
-  <h1>EXPLORE</h1>
-  <h1>EXPLORE</h1>
-  <h1>EXPLORE</h1>
-  <h1>EXPLORE</h1>
+<section>
+    <div class="recipe-list-container">
+      
+    </div>
+</section>  
+
+</section>
 
   <script>
     const api_key = "<%= api_key %>";

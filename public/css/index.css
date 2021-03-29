@@ -85,3 +85,8 @@ nav {
   padding-bottom: 5px;
   transition-duration: 0.2s;
 }
+
+footer {
+  background-color: #272932;
+  color: white;
+}
