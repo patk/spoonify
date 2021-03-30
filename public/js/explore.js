@@ -25,7 +25,7 @@ const cuisines = [
 
 let cuisine_index = Math.floor(Math.random() * cuisines.length);
 
-/*const food_video_settings = {
+const food_video_settings = {
   async: true,
   crossDomain: true,
   url: `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/food/videos/search?cuisine=${cuisines[cuisine_index]}`,
@@ -44,7 +44,7 @@ $.ajax(food_video_settings).done(function (response) {
   let videoUrl = `https://www.youtube.com/embed/${response.videos[video_index].youTubeId}`;
 
   $(".hero-video").attr("src", videoUrl);
-});*/
+});
 
 function set_meal_plan(url) {
   const meal_plan_settings = {
@@ -53,7 +53,7 @@ function set_meal_plan(url) {
     url: url,
     method: "GET",
     headers: {
-      "x-rapidapi-key": "efb3a5aedamsh256e9d662825a51p111b36jsnd302ccd3b52a",
+      "x-rapidapi-key": `${api_key}`,
       "x-rapidapi-host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
     },
   };
