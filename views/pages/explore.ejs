@@ -20,7 +20,7 @@
           </div>
 
           <div class="hero-video-container">
-            <iframe frameborder="0" src="https://www.youtube.com/embed/X_qo3lnRS1k"></iframe>
+            <iframe class="hero-video" frameborder="0" allowfullscreen></iframe>
             <!--<div class="recipe-container">
               <img src="https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2018/12/Shakshuka-19.jpg">
               <h5>Recipe 1</h5>
@@ -49,6 +49,8 @@
         <div class="meal-plan-header">
             <h3>Meal Plan</h3>
             <select id="selectdiet" name="selectdiet">
+                <option value="" disabled selected>Select diet type</option>
+                <option value="">-</option>
                 <option value="gluten free">Gluten Free</option>
                 <option value="ketogenic">Ketogenic</option>
                 <option value="vegetarian">Vegetarian</option>
@@ -66,22 +68,22 @@
                 <div class="meal-container">
                   <h4>Breakfast</h4>
                   <div class = "meal-card">
-                    <img src="https://spoonacular.com/recipeImages/395635-556x370.jpg">
-                    <h5>Cream Cheese Banana Nut Bread</h5>
+                    <img id="breakfast-img">
+                    <h5 id="meal-plan-breakfast"></h5>
                   </div>
                 </div>
                 <div class="meal-container">
                   <h4>Lunch</h4>
                   <div class = "meal-card">
-                    <img src="https://spoonacular.com/recipeImages/395635-556x370.jpg">
-                    <h5>Leftover Rice Casserole</h5>
+                    <img id="lunch-img">
+                    <h5 id="meal-plan-lunch"></h5>
                   </div>
                 </div>
                 <div class="meal-container">
                   <h4>Dinner</h4>
                   <div class = "meal-card">
-                    <img src="https://spoonacular.com/recipeImages/395635-556x370.jpg">
-                    <h5>Leek & Cheese Pie</h5>
+                    <img id="dinner-img">
+                    <h5 id="meal-plan-dinner"></h5>
                   </div>
                 </div>
             </div>
@@ -91,19 +93,19 @@
                 <table>
                   <tr>
                     <td>Calories</td>
-                    <td>hello1</td>
+                    <td id="meal-plan-calories"></td>
                   </tr>
                   <tr>
                     <td>Protein</td>
-                    <td>hello2</td>
+                    <td id="meal-plan-protein"></td>
                   </tr>
                   <tr>
                     <td>Fat</td>
-                    <td>hello3</td>
+                    <td id="meal-plan-fat"></td>
                   </tr>
                   <tr>
                     <td>Carbohydrates</td>
-                    <td>hello4</td>
+                    <td id="meal-plan-carbs"></td>
                   </tr>
                 </table>
             </div>
