@@ -46,55 +46,60 @@ $.ajax(food_video_settings).done(function (response) {
   $(".hero-video").attr("src", videoUrl);
 });*/
 
-const meal_plan_settings = {
-  async: true,
-  crossDomain: true,
-  url:
-    "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/mealplans/generate?timeFrame=day&targetCalories=2000",
-  method: "GET",
-  headers: {
-    "x-rapidapi-key": "efb3a5aedamsh256e9d662825a51p111b36jsnd302ccd3b52a",
-    "x-rapidapi-host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
-  },
-};
+function set_meal_plan(url) {
+  const meal_plan_settings = {
+    async: true,
+    crossDomain: true,
+    url: url,
+    method: "GET",
+    headers: {
+      "x-rapidapi-key": "efb3a5aedamsh256e9d662825a51p111b36jsnd302ccd3b52a",
+      "x-rapidapi-host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
+    },
+  };
 
-$.ajax(meal_plan_settings).done(function (response) {
-  console.log(response);
+  $.ajax(meal_plan_settings).done(function (response) {
+    console.log(response);
 
-  let breakfast = response.meals[0];
-  let lunch = response.meals[1];
-  let dinner = response.meals[2];
+    let breakfast = response.meals[0];
+    let lunch = response.meals[1];
+    let dinner = response.meals[2];
 
-  $("#meal-plan-breakfast").text(breakfast.title);
-  $("#meal-plan-lunch").text(lunch.title);
-  $("#meal-plan-dinner").text(dinner.title);
+    $("#meal-plan-breakfast").text(breakfast.title);
+    $("#meal-plan-lunch").text(lunch.title);
+    $("#meal-plan-dinner").text(dinner.title);
 
-  $("#breakfast-img").attr(
-    "src",
-    `https://spoonacular.com/recipeImages/${breakfast.id}-556x370.${breakfast.imageType}`
-  );
-  $("#lunch-img").attr(
-    "src",
-    `https://spoonacular.com/recipeImages/${lunch.id}-556x370.${lunch.imageType}`
-  );
-  $("#dinner-img").attr(
-    "src",
-    `https://spoonacular.com/recipeImages/${dinner.id}-556x370.${dinner.imageType}`
-  );
+    $("#breakfast-img").attr(
+      "src",
+      `https://spoonacular.com/recipeImages/${breakfast.id}-556x370.${breakfast.imageType}`
+    );
+    $("#lunch-img").attr(
+      "src",
+      `https://spoonacular.com/recipeImages/${lunch.id}-556x370.${lunch.imageType}`
+    );
+    $("#dinner-img").attr(
+      "src",
+      `https://spoonacular.com/recipeImages/${dinner.id}-556x370.${dinner.imageType}`
+    );
 
-  $("#meal-plan-calories").html(response.nutrients.calories + " Cal");
-  $("#meal-plan-protein").html(response.nutrients.protein + " g");
-  $("#meal-plan-fat").html(response.nutrients.fat + " g");
-  $("#meal-plan-carbs").html(response.nutrients.carbohydrates + " g");
-});
+    $("#meal-plan-calories").html(response.nutrients.calories + " Cal");
+    $("#meal-plan-protein").html(response.nutrients.protein + " g");
+    $("#meal-plan-fat").html(response.nutrients.fat + " g");
+    $("#meal-plan-carbs").html(response.nutrients.carbohydrates + " g");
+  });
+}
+
+set_meal_plan(
+  `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/mealplans/generate?timeFrame=day&targetCalories=2000`
+);
 
 $("#selectdiet").on("change", function () {
+  let url = "";
   if (this.value === "") {
-    alert("NO DIET TYPE");
-    url;
+    url = `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/mealplans/generate?timeFrame=day&targetCalories=2000`;
+    set_meal_plan(url);
   } else {
-    alert(this.value);
+    url = `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/mealplans/generate?timeFrame=day&targetCalories=2000&diet=${this.value}`;
+    set_meal_plan(url);
   }
 });
-
-/*console.log("DIET TYPE: " + document.getElementById("selectdiet").value);*/
