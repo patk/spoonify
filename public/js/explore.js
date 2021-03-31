@@ -3,6 +3,8 @@ console.log("API KEY FROM FRONT END IS: " + `${api_key}`);
 
 $("#explore-link").toggleClass("active");
 
+// HERO SECTION
+
 const cuisines = [
   "chinese",
   "japanese",
@@ -37,14 +39,13 @@ const food_video_settings = {
 };
 
 $.ajax(food_video_settings).done(function (response) {
-  console.log(response);
-  console.log("RESPONSE LENGTH: " + response.videos.length);
-
   let video_index = Math.floor(Math.random() * response.videos.length);
   let videoUrl = `https://www.youtube.com/embed/${response.videos[video_index].youTubeId}`;
 
   $(".hero-video").attr("src", videoUrl);
 });
+
+// MEAL PLAN SECTION
 
 function set_meal_plan(url) {
   const meal_plan_settings = {
@@ -59,8 +60,7 @@ function set_meal_plan(url) {
   };
 
   $.ajax(meal_plan_settings).done(function (response) {
-    console.log(response);
-
+    //console.log(response);
     let breakfast = response.meals[0];
     let lunch = response.meals[1];
     let dinner = response.meals[2];
@@ -103,3 +103,25 @@ $("#selectdiet").on("change", function () {
     set_meal_plan(url);
   }
 });
+
+// RECIPES SECTION
+
+function set_recipes() {
+  const recipes_settings = {
+    async: true,
+    crossDomain: true,
+    url:
+      "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?query=%20&number=25",
+    method: "GET",
+    headers: {
+      "x-rapidapi-key": `${api_key}`,
+      "x-rapidapi-host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
+    },
+  };
+
+  $.ajax(recipes_settings).done(function (response) {
+    console.log(response);
+  });
+}
+
+set_recipes();
