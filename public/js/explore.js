@@ -52,18 +52,25 @@ $("#recipe-search-bar").submit((event) => {
 $(".search-button").click(() => {
   const search_value = $("#search-field").val();
 
-  const search_settings = {
-    async: true,
-    crossDomain: true,
-    url: `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?query=${search_value}&number=25`,
-    method: "GET",
-    headers: {
-      "x-rapidapi-key": `${api_key}`,
-      "x-rapidapi-host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
-    },
-  };
+  set_recipes(
+    `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?query=${search_value}&number=30`,
+    `search-result-content`
+  );
 
-  $.ajax(search_settings).done(function (response) {
+  // hide meal plan and recipe list sections then show search result section
+  $(".meal-plan").hide();
+  $(".recipe-list").hide();
+  $(".search-result").show();
+
+  // scroll down to the search result section
+  $("html,body").animate(
+    {
+      scrollTop: $(".search-result").offset().top,
+    },
+    "slow"
+  );
+
+  /*$.ajax(search_settings).done(function (response) {
     //console.log(response);
 
     // hide meal plan and recipe list sections then show search result section
@@ -78,7 +85,7 @@ $(".search-button").click(() => {
       },
       "slow"
     );
-  });
+  });*/
 });
 
 $(".back-button").click(() => {
@@ -148,12 +155,11 @@ $("#selectdiet").on("change", function () {
 
 // RECIPES SECTION
 
-function set_recipes() {
+function set_recipes(url, content) {
   const recipes_settings = {
     async: true,
     crossDomain: true,
-    url:
-      "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?query=%20&number=30",
+    url: url,
     method: "GET",
     headers: {
       "x-rapidapi-key": `${api_key}`,
@@ -168,14 +174,19 @@ function set_recipes() {
     $.each(response.results, (i, recipe) => {
       recipeContent += `
         <div class="recipe-card" id="recipe-${recipe.id}">
-          <img src="https://spoonacular.com/recipeImages/${recipe.image}" />
+          <img src="https://spoonacular.com/recipeImages/${recipe.id}-556x370.jpg" />
           <h5>${recipe.title}</h5>
         </div>
       `;
     });
 
-    $(".recipe-list-content").html(recipeContent);
+    $(`.${content}`).html(recipeContent);
   });
 }
 
-set_recipes();
+set_recipes(
+  `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?query=%20&number=30`,
+  `recipe-list-content`
+);
+
+// SEARCH RESULT SECTION
