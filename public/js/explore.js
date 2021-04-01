@@ -1,5 +1,5 @@
-console.log("hello from explore");
-console.log("API KEY FROM FRONT END IS: " + `${api_key}`);
+/*console.log("hello from explore");
+console.log("API KEY FROM FRONT END IS: " + `${api_key}`);*/
 
 $("#explore-link").toggleClass("active");
 
@@ -45,6 +45,48 @@ $.ajax(food_video_settings).done(function (response) {
   $(".hero-video").attr("src", videoUrl);
 });
 
+$("#recipe-search-bar").submit((event) => {
+  event.preventDefault();
+});
+
+$(".search-button").click(() => {
+  const search_value = $("#search-field").val();
+
+  const search_settings = {
+    async: true,
+    crossDomain: true,
+    url: `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?query=${search_value}&number=25`,
+    method: "GET",
+    headers: {
+      "x-rapidapi-key": `${api_key}`,
+      "x-rapidapi-host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
+    },
+  };
+
+  $.ajax(search_settings).done(function (response) {
+    //console.log(response);
+
+    // hide meal plan and recipe list sections then show search result section
+    $(".meal-plan").hide();
+    $(".recipe-list").hide();
+    $(".search-result").show();
+
+    // scroll down to the search result section
+    $("html,body").animate(
+      {
+        scrollTop: $(".search-result").offset().top,
+      },
+      "slow"
+    );
+  });
+});
+
+$(".back-button").click(() => {
+  $(".search-result").hide();
+  $(".meal-plan").show();
+  $(".recipe-list").show();
+});
+
 // MEAL PLAN SECTION
 
 function set_meal_plan(url) {
@@ -60,7 +102,7 @@ function set_meal_plan(url) {
   };
 
   $.ajax(meal_plan_settings).done(function (response) {
-    //console.log(response);
+    // load meal plan data
     let breakfast = response.meals[0];
     let lunch = response.meals[1];
     let dinner = response.meals[2];
@@ -111,7 +153,7 @@ function set_recipes() {
     async: true,
     crossDomain: true,
     url:
-      "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?query=%20&number=25",
+      "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?query=%20&number=30",
     method: "GET",
     headers: {
       "x-rapidapi-key": `${api_key}`,
@@ -121,6 +163,18 @@ function set_recipes() {
 
   $.ajax(recipes_settings).done(function (response) {
     console.log(response);
+    // load recipes data
+    let recipeContent = "";
+    $.each(response.results, (i, recipe) => {
+      recipeContent += `
+        <div class="recipe-card" id="recipe-${recipe.id}">
+          <img src="https://spoonacular.com/recipeImages/${recipe.image}" />
+          <h5>${recipe.title}</h5>
+        </div>
+      `;
+    });
+
+    $(".recipe-list-content").html(recipeContent);
   });
 }
 
