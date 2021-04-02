@@ -53,7 +53,7 @@ $(".search-button").click(() => {
   const search_value = $("#search-field").val();
 
   set_recipes(
-    `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?query=${search_value}&number=30`,
+    `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?query=${search_value}&number=90`,
     `search-result-content`
   );
 
@@ -171,13 +171,23 @@ function set_recipes(url, content) {
     console.log(response);
     // load recipes data
     let recipeContent = "";
+
     $.each(response.results, (i, recipe) => {
       recipeContent += `
         <div class="recipe-card" id="recipe-${recipe.id}">
-          <img src="https://spoonacular.com/recipeImages/${recipe.id}-556x370.jpg" />
+          <a href="/recipe/${recipe.id}"><img src="https://spoonacular.com/recipeImages/${recipe.id}-556x370.jpg" /></a>
           <h5>${recipe.title}</h5>
         </div>
-      `;
+        `;
+      /*$(".view-more-button").show();
+        $(".view-more-button").click(() => {
+          recipeContent += `
+          <div class="recipe-card" id="recipe-${recipe.id}">
+            <img src="https://spoonacular.com/recipeImages/${recipe.id}-556x370.jpg" />
+            <h5>${recipe.title}</h5>
+          </div>
+          `;
+        });*/
     });
 
     $(`.${content}`).html(recipeContent);
@@ -185,7 +195,7 @@ function set_recipes(url, content) {
 }
 
 set_recipes(
-  `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?query=%20&number=30`,
+  `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/search?query=%20&number=90`,
   `recipe-list-content`
 );
 

@@ -309,6 +309,30 @@ td {
   text-align: center;
 }
 
+.view-more {
+  display: flex;
+  justify-content: center;
+}
+
+.view-more button {
+  display: none;
+  width: 120px;
+  height: 40px;
+  background-color: #272932;
+  color: white;
+  border: #272932;
+  border-radius: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.view-more button:hover {
+  background-color: #bbbbbb;
+  color: black;
+  border: transparent;
+  transition-duration: 0.5s;
+}
+
 /* SEARCH RESULT SECTION */
 
 .search-result {
@@ -346,7 +370,7 @@ td {
 
 .search-result-header button:hover {
   background-color: #bbbbbb;
-  color: #272932;
+  color: black;
   border: transparent;
   transition-duration: 0.5s;
 }
