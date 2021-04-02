@@ -26,10 +26,12 @@ app.set("view engine", "ejs");
 const exploreRouter = require("./routes/explore.js");
 const communityRouter = require("./routes/community.js");
 const profileRouter = require("./routes/profile.js");
+const recipeRouter = require("./routes/recipe.js");
 
 app.use("/", exploreRouter);
 app.use("/community", communityRouter);
 app.use("/profile", profileRouter);
+app.use("/recipe", recipeRouter);
 
 app.listen(port, () => {
   console.log(`Server is listening on localhost: ${port}`);
