@@ -174,8 +174,8 @@ function set_recipes(url, content) {
 
     $.each(response.results, (i, recipe) => {
       recipeContent += `
-        <div class="recipe-card" id="recipe-${recipe.id}">
-          <a href="/recipe/${recipe.id}"><img src="https://spoonacular.com/recipeImages/${recipe.id}-556x370.jpg" /></a>
+        <div onclick="location.href='/recipe/${recipe.id}';" style="cursor: pointer;" class="recipe-card" id="recipe-${recipe.id}">
+          <img src="https://spoonacular.com/recipeImages/${recipe.id}-556x370.jpg" />
           <h5>${recipe.title}</h5>
         </div>
         `;

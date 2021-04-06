@@ -56,15 +56,13 @@
   /*background-color: brown;*/
 }
 
-.hero-text-container h2 {
-  font-size: 60px;
+.hero-text-container h1 {
   font-family: "Playfair Display", serif;
   text-shadow: 0px 3px 10px #000000;
 }
 
 .hero-text-container h4 {
   color: white;
-  font-size: 20px;
   font-weight: 300;
   text-shadow: 0px 3px 10px #000000;
 }
@@ -155,7 +153,6 @@
 
 .recipe-container h5 {
   margin: 10px;
-  font-size: 15px;
 }
 
 /* MEAL PLAN SECTION */
@@ -169,10 +166,6 @@
 .meal-plan-header {
   display: flex;
   flex-direction: row;
-}
-
-.meal-plan-header h3 {
-  font-size: 25px;
 }
 
 .meal-plan-header #selectdiet {
@@ -195,14 +188,6 @@
   flex-direction: row;
   margin-top: 20px;
   justify-content: space-between;
-}
-
-.meal-plan-content h4 {
-  font-size: 20px;
-}
-
-.meal-plan-content h5 {
-  font-size: 15px;
 }
 
 .meal-plan-meals {
@@ -273,7 +258,6 @@ td {
 
 .recipe-list-header h3 {
   margin: 20px 0px;
-  font-size: 25px;
 }
 
 .recipe-list-content {
@@ -352,7 +336,6 @@ td {
 }
 
 .search-result-header h3 {
-  font-size: 25px;
   margin-left: 10px;
   margin-bottom: 20px;
 }
@@ -382,7 +365,8 @@ td {
   justify-content: space-between;
 }
 
-.recipe-card img {
+.search-result-content img {
+  width: 100%;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }

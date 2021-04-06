@@ -3,9 +3,9 @@ const express = require("express");
 const router = express.Router();
 const { api_key } = require("../config");
 
-router.get("/", (req, res) => {
+/*router.get("/", (req, res) => {
   res.render("pages/recipe");
-});
+});*/
 
 router.get("/:id", (req, res) => {
   console.log("RECIPE ID (BACKEND): " + req.params.id);

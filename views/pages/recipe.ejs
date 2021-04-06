@@ -1,6 +1,87 @@
 <link rel="stylesheet" href="/static/css/recipe.css" />
 
-<h1>RECIPES PAGE</h1>
+<section class="recipe-header">
+  <div class="recipe-header-container">
+    <div class="recipe-header-left">
+      <!-- recipe image will be displayed here -->
+      <img id="recipe-image" />
+    </div>
+    <div class="recipe-header-right">
+      <!-- recipe title, readyInMinutes, servings, diets will be displayed here -->
+      <div class="recipe-header-top-right">
+        <h2 id="recipe-title">
+          <!-- insert recipe title -->
+        </h2>
+      </div>
+
+      <div class="recipe-header-bottom-right">
+        <div class="recipe-quick-info">
+          <i class="fa fa-clock-o" style="font-size: 30px"></i>
+          <div class="recipe-quick-info-details">
+            <h5>Preparation time</h5>
+            <p id="preparation-time">
+              <!-- insert preparation time -->
+            </p>
+          </div>
+        </div>
+        <div class="recipe-quick-info">
+          <i class="fa fa-clock-o" style="font-size: 30px"></i>
+          <div class="recipe-quick-info-details">
+            <h5>Cooking time</h5>
+            <p id="cooking-time">
+              <!-- insert cooking time -->
+            </p>
+          </div>
+        </div>
+        <div class="recipe-quick-info">
+          <i class="fa fa-cutlery" style="font-size: 30px"></i>
+          <div class="recipe-quick-info-details">
+            <h5>Servings</h5>
+            <p id="servings">
+              <!-- insert recipe's servings -->
+            </p>
+          </div>
+        </div>
+        <div class="recipe-quick-info">
+          <i class="fa fa-leaf" style="font-size: 30px"></i>
+          <div class="recipe-quick-info-details">
+            <h5>Diets</h5>
+            <p id="diets">
+              <!-- insert recipe's diet -->
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="summary">
+  <div class="summary-container">
+    <h3>Summary</h3>
+    <p id="recipe-summary">
+      <!-- insert recipe summary -->
+    </p>
+  </div>
+</section>
+
+<section class="ingredients">
+  <div class="ingredients-container">
+    <h3>Ingredients</h3>
+    <div class="ingredients-content">
+      <!-- insert recipe's ingredients -->
+    </div>
+  </div>
+</section>
+
+<section class="instructions">
+  <div class="instructions-container">
+    <h3>Instructions</h3>
+    <div class="instructions-content">
+      <!-- insert recipe's instructions -->
+    </div>
+  </div>
+</section>
 
 <section>
   <script>
