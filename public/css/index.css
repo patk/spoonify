@@ -8,6 +8,10 @@
 /*body {
   background-color: #bbbbbb;
 }*/
+html {
+  position: relative;
+  min-height: 100%;
+}
 
 nav {
   display: flex;
@@ -93,6 +97,7 @@ footer {
   background-color: #272932;
   color: white;
   height: 50px;
+  width: 100%;
 }
 
 h1 {

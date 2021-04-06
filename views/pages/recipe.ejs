@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="/static/css/recipe.css" />
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
 <section class="recipe-header">
   <div class="recipe-header-container">
@@ -56,32 +57,52 @@
   </div>
 </section>
 
-<section class="summary">
-  <div class="summary-container">
-    <h3>Summary</h3>
-    <p id="recipe-summary">
-      <!-- insert recipe summary -->
-    </p>
-  </div>
+<section class="recipe-content">
+  <article class="summary">
+    <div class="summary-container">
+      <h3>Summary</h3>
+      <p id="recipe-summary">
+        <!-- insert recipe summary -->
+      </p>
+    </div>
+  </article>
+
+  <article class="ingredients">
+    <div class="ingredients-container">
+      <h3>Ingredients</h3>
+      <div class="ingredients-content">
+        <!-- insert recipe's ingredients -->
+      </div>
+    </div>
+  </article>
+
+  <article class="instructions">
+    <div class="instructions-container">
+      <h3>Instructions</h3>
+      <div class="instructions-content">
+        <!-- insert recipe's instructions -->
+      </div>
+    </div>
+  </article>
 </section>
 
-<section class="ingredients">
-  <div class="ingredients-container">
-    <h3>Ingredients</h3>
-    <div class="ingredients-content">
-      <!-- insert recipe's ingredients -->
-    </div>
+<aside class="recipe-aside">
+  <div class="recipe-score">
+    <h3>Score</h3>
+    <div id="score-chart"></div>
   </div>
-</section>
+  <div class="recipe-comment">
+    <h3>Comments</h3>
+    <!-- insert recipe's comments -->
+    <div class="comment-card">
+      <p>This recipe is so good!</p>
+    </div>
 
-<section class="instructions">
-  <div class="instructions-container">
-    <h3>Instructions</h3>
-    <div class="instructions-content">
-      <!-- insert recipe's instructions -->
+    <div class="comment-card">
+      <p>Will try to make this at home :)</p>
     </div>
   </div>
-</section>
+</aside>
 
 <section>
   <script>

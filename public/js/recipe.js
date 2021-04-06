@@ -73,6 +73,59 @@ function set_recipe_info() {
     });
 
     $(".instructions-content").html(instructions_content);
+
+    // recipe's score
+    var options = {
+      chart: {
+        fontFamily: "Poppins, sans-serif",
+        height: 280,
+        type: "radialBar",
+      },
+
+      series: [response.spoonacularScore],
+
+      plotOptions: {
+        radialBar: {
+          hollow: {
+            margin: 15,
+            size: "40%",
+          },
+
+          dataLabels: {
+            showOn: "always",
+            name: {
+              offsetY: 10,
+              show: false,
+              color: "#888",
+              fontSize: "13px",
+            },
+            value: {
+              color: "#111",
+              fontSize: "30px",
+              show: true,
+            },
+          },
+        },
+      },
+      fill: {
+        colors: ["#bcdf3f"],
+        type: "gradient",
+        gradient: {
+          shade: "dark",
+          type: "horizontal",
+          gradientToColors: ["#fcb97d"],
+          stops: [0, 100],
+        },
+      },
+      stroke: {
+        lineCap: "round",
+      },
+      labels: ["Score"],
+    };
+
+    var chart = new ApexCharts(document.querySelector("#score-chart"), options);
+
+    chart.render();
   });
 }
 

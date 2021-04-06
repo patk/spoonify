@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",
+    "apexcharts": "^3.26.0",
     "bcrypt": "^5.0.1",
     "dotenv": "^8.2.0",
     "ejs": "^3.1.6",

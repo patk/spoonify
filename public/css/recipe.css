@@ -56,7 +56,13 @@
   margin-left: 10px;
 }
 
-/* SUMMARY SECTION */
+/* RECIPE CONTENT */
+.recipe-content {
+  width: 70%;
+  float: left;
+}
+
+/* SUMMARY */
 
 .summary-container {
   display: flex;
@@ -68,7 +74,7 @@
   margin-bottom: 20px;
 }
 
-/* INGREDIENTS SECTION */
+/* INGREDIENTS */
 
 .ingredients-container {
   display: flex;
@@ -103,7 +109,7 @@
   max-height: 50px;
 }
 
-/* INSTRUCTIONS SECTION */
+/* INSTRUCTIONS */
 
 .instructions-container {
   display: flex;
@@ -117,4 +123,24 @@
 
 .instructions-content p {
   margin-bottom: 20px;
+}
+
+/* ASIDE */
+
+.recipe-aside {
+  width: 30%;
+  background-color: #dddddd;
+  float: right;
+  padding: 20px 30px;
+}
+
+#score-chart {
+  max-width: 650px;
+}
+
+.comment-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 10px 0px;
 }
