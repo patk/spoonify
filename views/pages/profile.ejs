@@ -10,9 +10,9 @@
 </section>
 
 <section class="profile-content">
-  <div class="diary-container">
-    <h3>Diary</h3>
-    <div class="diary-container-top">
+  <div class="summary-container">
+    <h3>Summary</h3>
+    <div class="summary-content-container">
       <div id="cal-intake">
         <h4>Calories Intake</h4>
         <div id="calorieschart"></div>
@@ -22,9 +22,45 @@
         <div id="nutritionchart"></div>
       </div>
     </div>
-    <div class="diary-container-bottom"></div>
   </div>
-  <h3>Saved recipes</h3>
+  <div class="diary-container">
+    <h3>Food Diary</h3>
+    <div class="food-diary-container">
+      <div class="food-diary">
+        <table>
+          <tr>
+            <td>Cereal</td>
+            <td>230 kcal</td>
+            <td>Breakfast</td>
+          </tr>
+          <tr>
+            <td>Chicken fried rice</td>
+            <td>540 kcal</td>
+            <td>Lunch</td>
+          </tr>
+          <tr>
+            <td>Grilled salmon</td>
+            <td>420 kcal</td>
+            <td>Dinner</td>
+          </tr>
+        </table>
+      </div>
+      <div class="add-dairy">
+        <form id="add-diary-form" method="POST" action="/dairy">
+          <input type="text" placeholder="Food name" />
+          <input type="date" />
+          <select>
+            <option value="" disabled selected>Meal</option>
+            <option>Breakfast</option>
+            <option>Lunch</option>
+            <option>Dinner</option>
+          </select>
+          <input type="number" placeholder="Calories" />
+          <button>Add</button>
+        </form>
+      </div>
+    </div>
+  </div>
 </section>
 
 <script src="/static/js/profile.js" defer></script>

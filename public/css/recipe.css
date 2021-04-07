@@ -3,6 +3,7 @@
 .recipe-header {
   background-color: #fcb97d;
   padding: 0px 100px;
+  margin: 0px;
 }
 
 .recipe-header-container {
@@ -58,6 +59,11 @@
 
 /* RECIPE CONTENT */
 .recipe-content {
+  margin: 0px 100px;
+}
+
+/* RECIPE MAIN CONTENT */
+.recipe-main-content {
   width: 70%;
   float: left;
 }
@@ -67,7 +73,7 @@
 .summary-container {
   display: flex;
   flex-direction: column;
-  margin: 20px 100px;
+  margin: 20px 100px 20px 0px;
 }
 
 .summary-container h3 {
@@ -79,7 +85,7 @@
 .ingredients-container {
   display: flex;
   flex-direction: column;
-  margin: 20px 100px;
+  margin: 20px 100px 20px 0px;
 }
 
 .ingredients-container h3 {
@@ -114,7 +120,7 @@
 .instructions-container {
   display: flex;
   flex-direction: column;
-  margin: 20px 100px;
+  margin: 20px 100px 20px 0px;
 }
 
 .instructions-container h3 {

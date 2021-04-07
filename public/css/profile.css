@@ -30,44 +30,79 @@ main {
   width: 70%;
   float: right;
   min-height: 100vh;
-  padding: 20px 30px;
+  padding: 20px 0px 20px 30px;
 }
 
-/* DIARY SECTION */
+/* SUMMARY SECTION */
 
-.diary-container {
+.summary-container {
   display: flex;
   flex-direction: column;
 }
 
-.diary-container-top {
+.summary-content-container {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 #cal-intake {
-  width: 50%;
+  width: 55%;
 }
 
 #calorieschart {
-  background-color: #8a9caa;
-  max-width: 350px;
+  background-color: #dddddd;
+  /*max-width: 350px;*/
+  padding: 10px;
   margin: 20px 0px;
-  border-radius: 8px;
+  border-radius: 20px;
 }
 
 #nutrition-intake {
-  width: 50%;
+  width: 40%;
   /*background-color: tomato;*/
 }
 
 #nutritionchart {
-  background-color: #fcb97d;
-  max-width: 350px;
+  background-color: #dddddd;
+  /*max-width: 350px;*/
+  padding: 10px;
   margin: 20px 0px;
-  border-radius: 8px;
+  border-radius: 20px;
 }
 
-.diary-container h3 {
+.summary-container h3 {
   margin-bottom: 20px;
+}
+
+/* FOOD DIARY SECTION */
+
+td {
+  padding: 4%;
+  border-bottom: 1px solid #bbbbbb;
+  vertical-align: middle;
+}
+
+.food-diary-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.food-diary {
+  width: 70%;
+  margin-right: 10%;
+}
+
+.food-diary table {
+  width: 100%;
+}
+
+.add-dairy {
+  width: 30%;
+}
+
+#add-diary-form {
+  display: flex;
+  flex-direction: column;
 }
