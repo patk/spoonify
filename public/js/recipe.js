@@ -130,3 +130,11 @@ function set_recipe_info() {
 }
 
 set_recipe_info();
+
+$("#save-button").click(() => {
+  $("#save-button").css({
+    "background-color": "#272932",
+    color: "white",
+  });
+  $("#save-button").html("Saved");
+});

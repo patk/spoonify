@@ -138,6 +138,37 @@
   max-width: 650px;
 }
 
+.save-rate-button-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.save-rate-button-wrapper button {
+  padding: 10px;
+  width: 45%;
+  background: #bbbbbb;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.save-rate-button-wrapper i {
+  margin-right: 10px;
+}
+
+.save-rate-button-wrapper button:hover {
+  background-color: #fcb97d;
+  /*color: white;*/
+  border: 1px solid transparent;
+  transition-duration: 0.5s;
+}
+
+.recipe-comment h3 {
+  margin-bottom: 20px;
+}
+
 .comment-card {
   background-color: white;
   border-radius: 8px;
