@@ -1,0 +1,73 @@
+main {
+  margin: 0px 100px;
+}
+
+/* PERSONAL INFO */
+
+.personal-info img {
+  width: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.personal-info {
+  width: 30%;
+  background-color: #dddddd;
+  float: left;
+  padding: 20px 30px;
+  /*min-height: 100vh;*/
+}
+
+.personal-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* PROFILE CONTENT */
+
+.profile-content {
+  width: 70%;
+  float: right;
+  min-height: 100vh;
+  padding: 20px 30px;
+}
+
+/* DIARY SECTION */
+
+.diary-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.diary-container-top {
+  display: flex;
+  flex-direction: row;
+}
+
+#cal-intake {
+  width: 50%;
+}
+
+#calorieschart {
+  background-color: #8a9caa;
+  max-width: 350px;
+  margin: 20px 0px;
+  border-radius: 8px;
+}
+
+#nutrition-intake {
+  width: 50%;
+  /*background-color: tomato;*/
+}
+
+#nutritionchart {
+  background-color: #fcb97d;
+  max-width: 350px;
+  margin: 20px 0px;
+  border-radius: 8px;
+}
+
+.diary-container h3 {
+  margin-bottom: 20px;
+}

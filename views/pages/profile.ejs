@@ -1,5 +1,30 @@
 <link rel="stylesheet" href="/static/css/profile.css" />
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
-<h1>PROFILE</h1>
+<section class="personal-info">
+  <div class="personal-info-container">
+    <img src="/static/assets/profile_pic.JPG" alt="profile_pic" />
+    <h3>Pat K.</h3>
+    <p>sample@gmail.com</p>
+  </div>
+</section>
+
+<section class="profile-content">
+  <div class="diary-container">
+    <h3>Diary</h3>
+    <div class="diary-container-top">
+      <div id="cal-intake">
+        <h4>Calories Intake</h4>
+        <div id="calorieschart"></div>
+      </div>
+      <div id="nutrition-intake">
+        <h4>Nutrition Intake</h4>
+        <div id="nutritionchart"></div>
+      </div>
+    </div>
+    <div class="diary-container-bottom"></div>
+  </div>
+  <h3>Saved recipes</h3>
+</section>
 
 <script src="/static/js/profile.js" defer></script>
