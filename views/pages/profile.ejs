@@ -85,7 +85,7 @@
           </button>
         </div>
 
-        <table>
+        <table id="food-intake-table">
             <% let diary_parsed = JSON.parse(JSON.stringify(diary)); %>
             <% for (let j = 0; j < diary_parsed.length; j++) { %>
               <% if (diary_parsed[j].diary_date.toString().slice(0, 10) === "2021-04-09") { %>
@@ -98,6 +98,22 @@
             <% } %>  
             </tr>
         </table>
+
+        <div id="add-food-diary">
+            <form id="add-diary-form" method="POST" action="/profile/food">
+              <input type="text" name="foodTitle" placeholder="Food title" />
+              <input type="datetime-local" name="foodDate"/>
+              <select name="foodMeal">
+                <option value="" disabled selected>Meal</option>
+                <option>Breakfast</option>
+                <option>Lunch</option>
+                <option>Dinner</option>
+              </select>
+              <input type="number" name="foodCalories" placeholder="Calories" />
+              <button>Add</button>
+            </form>
+            <button id="cancel-add-food-button">Cancel</button>
+          </div>
 
       </div>
       <div class="water-diary">
@@ -123,27 +139,13 @@
         </div>
       </div>
 
-      <!--<div class="add-diary">
-        <form id="add-diary-form" method="POST" action="/dairy">
-          <input type="text" placeholder="Food name" />
-          <input type="date" />
-          <select>
-            <option value="" disabled selected>Meal</option>
-            <option>Breakfast</option>
-            <option>Lunch</option>
-            <option>Dinner</option>
-          </select>
-          <input type="number" placeholder="Calories" />
-          <button>Add</button>
-        </form>
-      </div>-->
-      
     </div>
   </div>
 
   <!-- water intake section -->
-  <div class="water-intake">
+  <div class="saved-recipes">
     <h3>Saved Recipes</h3>
+    <p>No saved recipes</p>
   </div>
 </section>
 

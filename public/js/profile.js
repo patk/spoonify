@@ -136,3 +136,13 @@ new ApexCharts(
   document.querySelector("#waterchart"),
   waterIntakeOption
 ).render();
+
+$("#add-food-button").click(() => {
+  $("#food-intake-table").hide();
+  $("#add-food-diary").show();
+});
+
+$("#cancel-add-food-button").click(() => {
+  $("#add-food-diary").hide();
+  $("#food-intake-table").show();
+});
