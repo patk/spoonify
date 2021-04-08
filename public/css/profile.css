@@ -24,6 +24,27 @@ main {
   align-items: center;
 }
 
+.health-statistics {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.health-statistic-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 45%;
+  background-color: #bbbbbb5c;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  height: 100px;
+}
+
 /* PROFILE CONTENT */
 
 .profile-content {
