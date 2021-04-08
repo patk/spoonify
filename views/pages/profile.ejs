@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="/static/css/profile.css" />
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script>
+  // user's personal info
   const user_height = "<%= Math.round(user[0].height * 10) / 10 %>";
   const user_weight = "<%= Math.round(user[0].weight * 10) / 10 %>";
   const bmi =
@@ -24,6 +25,10 @@
     document.getElementById("userBMI").innerHTML = bmi;
     document.getElementById("userGender").innerHTML = gender_full;
   };
+
+  var diary = `<%-JSON.stringify(diary)%>`;
+  var diary_parsed = JSON.parse(diary);
+  //console.log(diary_parsed);
 </script>
 
 <section class="personal-info">
@@ -75,27 +80,25 @@
       <div class="food-diary">
         <div class="diary-header">
           <h4>Food</h4>
-          <button class="add-button">
+          <button id="add-food-button" class="add-button">
             <i class="fa fa-plus" style="font-size: 15px"></i>
           </button>
         </div>
+
         <table>
-          <tr>
-            <td>Cereal</td>
-            <td>230 kcal</td>
-            <td>Breakfast</td>
-          </tr>
-          <tr>
-            <td>Chicken fried rice</td>
-            <td>540 kcal</td>
-            <td>Lunch</td>
-          </tr>
-          <tr>
-            <td>Grilled salmon</td>
-            <td>420 kcal</td>
-            <td>Dinner</td>
-          </tr>
+            <% let diary_parsed = JSON.parse(JSON.stringify(diary)); %>
+            <% for (let j = 0; j < diary_parsed.length; j++) { %>
+              <% if (diary_parsed[j].diary_date.toString().slice(0, 10) === "2021-04-09") { %>
+              <tr>
+                <td><%= diary_parsed[j].food_title %></td>
+                <td><%= diary_parsed[j].calories %> kcal</td>
+                <td><%= diary_parsed[j].meal %></td>
+              </tr>
+              <% } %>  
+            <% } %>  
+            </tr>
         </table>
+
       </div>
       <div class="water-diary">
         <div class="diary-header">
@@ -119,6 +122,7 @@
           </div>
         </div>
       </div>
+
       <!--<div class="add-diary">
         <form id="add-diary-form" method="POST" action="/dairy">
           <input type="text" placeholder="Food name" />
@@ -133,6 +137,7 @@
           <button>Add</button>
         </form>
       </div>-->
+      
     </div>
   </div>
 

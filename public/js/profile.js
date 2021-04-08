@@ -2,6 +2,29 @@ console.log("hello from profile");
 
 $("#profile-link").toggleClass("active");
 
+function onlyUnique(value, index, self) {
+  return self.indexOf(value) === index;
+}
+
+let date = [];
+for (let i = 0; i < diary_parsed.length; i++) {
+  date.push(diary_parsed[i].diary_date.toString().slice(0, 10));
+}
+let uniqueDate = date.filter(onlyUnique);
+
+// get daily calories intake
+let caloriesIntake = [];
+for (let i = 0; i < uniqueDate.length; i++) {
+  //console.log(uniqueDate[i]);
+  let dailyCalories = 0;
+  for (let j = 0; j < diary_parsed.length; j++) {
+    if (uniqueDate[i] === diary_parsed[j].diary_date.toString().slice(0, 10)) {
+      dailyCalories += diary_parsed[j].calories;
+    }
+  }
+  caloriesIntake.push(dailyCalories);
+}
+
 // calories intake chart
 var calIntakeOption = {
   chart: {
@@ -12,7 +35,7 @@ var calIntakeOption = {
   series: [
     {
       name: "calories-intake",
-      data: [1850, 2100, 1990, 2000, 1780, 2290, 2170],
+      data: caloriesIntake,
     },
   ],
   fill: {
@@ -26,15 +49,7 @@ var calIntakeOption = {
     },
   },
   xaxis: {
-    categories: [
-      "2021-04-05",
-      "2021-04-06",
-      "2021-04-07",
-      "2021-04-08",
-      "2021-04-09",
-      "2021-04-10",
-      "2021-04-11",
-    ],
+    categories: uniqueDate,
   },
 };
 
