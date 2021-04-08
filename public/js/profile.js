@@ -53,7 +53,7 @@ var nutritionIntakeOption = {
     fontFamily: "Poppins, sans-serif",
   },
   series: [6, 1, 2],
-  labels: ["Easy", "Medium", "Difficult"],
+  labels: ["Carbs", "Protein", "Fat"],
   colors: ["#66ccff", "#6699ff", "#6666ff", "#6633ff"],
   stroke: {
     show: false,
@@ -71,3 +71,53 @@ var nutritionIntake = new ApexCharts(
 );
 
 nutritionIntake.render();
+
+// water intake chart
+var waterIntakeOption = {
+  chart: {
+    height: 280,
+    type: "radialBar",
+    fontFamily: "Poppins, sans-serif",
+  },
+  series: [72],
+  colors: ["#bcdf3f"],
+  plotOptions: {
+    radialBar: {
+      startAngle: -90,
+      endAngle: 90,
+      track: {
+        background: "#333",
+        startAngle: -90,
+        endAngle: 90,
+      },
+      dataLabels: {
+        name: {
+          show: false,
+        },
+        value: {
+          fontSize: "20px",
+          show: true,
+          offsetY: -10,
+        },
+      },
+    },
+  },
+  fill: {
+    type: "gradient",
+    gradient: {
+      shade: "dark",
+      type: "horizontal",
+      gradientToColors: ["#87D4F9"],
+      stops: [0, 100],
+    },
+  },
+  stroke: {
+    lineCap: "butt",
+  },
+  labels: ["Progress"],
+};
+
+new ApexCharts(
+  document.querySelector("#waterchart"),
+  waterIntakeOption
+).render();

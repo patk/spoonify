@@ -51,10 +51,11 @@ main {
 }
 
 #calorieschart {
-  background-color: #dddddd;
+  background-color: #fcb87d8a;
   /*max-width: 350px;*/
   padding: 10px;
-  margin: 20px 0px;
+  margin-bottom: 20px;
+  margin-top: 10px;
   border-radius: 20px;
 }
 
@@ -64,10 +65,11 @@ main {
 }
 
 #nutritionchart {
-  background-color: #dddddd;
+  background-color: #8a9caa8a;
   /*max-width: 350px;*/
   padding: 10px;
-  margin: 20px 0px;
+  margin-bottom: 20px;
+  margin-top: 10px;
   border-radius: 20px;
 }
 
@@ -77,32 +79,97 @@ main {
 
 /* FOOD DIARY SECTION */
 
+.diary-container h3 {
+  margin-bottom: 20px;
+}
+
 td {
-  padding: 4%;
+  padding: 2%;
   border-bottom: 1px solid #bbbbbb;
   vertical-align: middle;
 }
 
-.food-diary-container {
+.food-diary table {
+  background-color: #dddddd;
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  border-radius: 20px;
+}
+
+.food-water-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
 .food-diary {
-  width: 70%;
-  margin-right: 10%;
+  width: 55%;
+  margin-bottom: 20px;
 }
 
 .food-diary table {
   width: 100%;
 }
 
-.add-dairy {
+.add-diary {
   width: 30%;
 }
 
 #add-diary-form {
   display: flex;
   flex-direction: column;
+}
+
+.diary-header {
+  display: flex;
+  flex-direction: row;
+}
+
+.add-button {
+  border-radius: 20px;
+  width: 60px;
+  height: 30px;
+  background-color: #272932;
+  color: white;
+  border: #272932;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.add-button:hover {
+  background-color: #bbbbbb;
+  color: black;
+  border: transparent;
+  transition-duration: 0.5s;
+}
+
+.water-diary {
+  width: 40%;
+}
+
+.diary-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #dddddd;
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  border-radius: 20px;
+  max-height: 180px;
+}
+
+.diary-content-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #8a9caa8a;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.horizontal-separator {
+  border-bottom: 3px solid #dddddd;
+  margin: 0 3%;
 }

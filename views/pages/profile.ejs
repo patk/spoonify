@@ -6,12 +6,31 @@
     <img src="/static/assets/profile_pic.JPG" alt="profile_pic" />
     <h3>Pat K.</h3>
     <p>sample@gmail.com</p>
+    <div class="health-statistics">
+      <div class="health-statistic-card">
+        <h5>Height</h5>
+        <p>170 cm</p>
+      </div>
+      <div class="health-statistic-card">
+        <h5>Weight</h5>
+        <p>68 kg</p>
+      </div>
+      <div class="health-statistic-card">
+        <h5>BMI</h5>
+        <p>22.5</p>
+      </div>
+      <div class="health-statistic-card">
+        <h5>Gender</h5>
+        <p>M</p>
+      </div>
+    </div>
   </div>
 </section>
 
 <section class="profile-content">
+  <!-- statistic section -->
   <div class="summary-container">
-    <h3>Summary</h3>
+    <h3>Statistics</h3>
     <div class="summary-content-container">
       <div id="cal-intake">
         <h4>Calories Intake</h4>
@@ -23,10 +42,18 @@
       </div>
     </div>
   </div>
+
+  <!-- food diary section -->
   <div class="diary-container">
-    <h3>Food Diary</h3>
-    <div class="food-diary-container">
+    <h3>Diary</h3>
+    <div class="food-water-container">
       <div class="food-diary">
+        <div class="diary-header">
+          <h4>Food</h4>
+          <button class="add-button">
+            <i class="fa fa-plus" style="font-size: 15px"></i>
+          </button>
+        </div>
         <table>
           <tr>
             <td>Cereal</td>
@@ -45,7 +72,29 @@
           </tr>
         </table>
       </div>
-      <div class="add-dairy">
+      <div class="water-diary">
+        <div class="diary-header">
+          <h4>Water</h4>
+          <button class="add-button">
+            <i class="fa fa-plus" style="font-size: 15px"></i>
+          </button>
+        </div>
+        <div class="diary-content">
+          <div id="waterchart"></div>
+          <div class="diary-content-right">
+            <div class="content-wrapper">
+              <h5>Consumed</h5>
+              <p>1.8 L</p>
+            </div>
+            <span class="horizontal-separator"></span>
+            <div class="content-wrapper">
+              <h5>Goal</h5>
+              <p>2.5 L</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--<div class="add-diary">
         <form id="add-diary-form" method="POST" action="/dairy">
           <input type="text" placeholder="Food name" />
           <input type="date" />
@@ -58,8 +107,13 @@
           <input type="number" placeholder="Calories" />
           <button>Add</button>
         </form>
-      </div>
+      </div>-->
     </div>
+  </div>
+
+  <!-- water intake section -->
+  <div class="water-intake">
+    <h3>Saved Recipes</h3>
   </div>
 </section>
 
